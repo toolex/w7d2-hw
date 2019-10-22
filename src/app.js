@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     computed: {
       newTotal: function() {
-        this.euroInput + this.selectedCurrency
+        return this.euroInput * this.selectedCurrency
       }
     },
     mounted(){
