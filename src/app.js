@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
     computed: {
       newTotal: function() {
         return this.euroInput * this.selectedCurrency
+      },
+      otherTotal: function() {
+        return this.euroInput / this.selectedCurrency
       }
     },
     mounted(){
