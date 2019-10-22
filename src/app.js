@@ -5,11 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
     el: "#app",
     data: {
       currencies: [],
-      selectedCurrency: null
+      selectedCurrency: null,
+      euroInput: 0
     },
     computed: {
       newTotal: function() {
-        
+        this.euroInput + this.selectedCurrency
       }
     },
     mounted(){
