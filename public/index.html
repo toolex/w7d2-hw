@@ -18,11 +18,11 @@
       <option disabled value="">Select a Currency</option>
       <option v-for="(name, value) in currencies.rates" :value="name">{{value}}</option>
     </select>
-    <h2>Euro to x converter</h2>
+    <h2 v-if="selectedCurrency">Euro to x converter</h2>
 
     <output v-if="selectedCurrency" name="">New Total: {{newTotal}}</output>
 
-    <h2>x to Euro Converter</h2>
+    <h2 v-if="selectedCurrency">x to Euro Converter</h2>
     <output v-if="selectedCurrency" name="">In Euros: {{otherTotal}}</output>
   </div>
 </body>
