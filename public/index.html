@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <h1>Currency Exchange</h1>
+  <h1>Currency Exchange Rates</h1>
   <div id="app">
     <ul>
       <li v-for="(currency, value) in currencies.rates"> {{value}} :{{currency}}</li>
@@ -20,10 +20,10 @@
     </select>
     <h2>Euro to x converter</h2>
 
-    <output name="">New Total: {{newTotal}}</output>
+    <output v-if="selectedCurrency" name="">New Total: {{newTotal}}</output>
 
     <h2>x to Euro Converter</h2>
-    <output name="">In Euros: {{otherTotal}}</output>
+    <output v-if="selectedCurrency" name="">In Euros: {{otherTotal}}</output>
   </div>
 </body>
 </html>
